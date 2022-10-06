@@ -1,0 +1,4 @@
+
+---
+geometry_msgs/PointStamped[] keypoints
+vision_msgs/BoundingBox2D bbox
