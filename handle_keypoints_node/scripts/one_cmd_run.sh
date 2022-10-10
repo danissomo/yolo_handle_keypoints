@@ -12,5 +12,5 @@ cd /home/keypoint_regression;
 rm -rf ./build;
 catkin_make;
 source ./devel/setup.bash;
-roslaunch handle_keypoints_node default.launch"
+roslaunch -v handle_keypoints_node default.launch"
 docker exec -it $container_name bash -c "$init_cmd"

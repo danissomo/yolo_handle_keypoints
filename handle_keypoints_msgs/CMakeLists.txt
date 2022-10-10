@@ -8,6 +8,7 @@ project(handle_keypoints_msgs)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
+  vision_msgs
   geometry_msgs
   sensor_msgs
   std_msgs
@@ -69,10 +70,11 @@ add_service_files(
 # )
 
 ## Generate added messages and services with any dependencies listed here
-# generate_messages(
-#   DEPENDENCIES
-#   geometry_msgs#   sensor_msgs#   std_msgs
-# )
+generate_messages(
+  DEPENDENCIES
+  vision_msgs
+  geometry_msgs#   sensor_msgs#   std_msgs
+)
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
@@ -107,7 +109,7 @@ catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES handle_keypoints_msgs
 #  CATKIN_DEPENDS geometry_msgs sensor_msgs std_msgs
-#  DEPENDS system_lib
+DEPENDS system_lib
 )
 
 ###########

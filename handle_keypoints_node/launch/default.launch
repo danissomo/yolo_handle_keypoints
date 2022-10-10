@@ -1,12 +1,12 @@
 <launch>
     <node name = "handle_keypoints" pkg="handle_keypoints_node" type="node.py">
         <param name = "name" value="yolox-s" type="str"/>
-        <param name = "exp_file_det" value= "src/detector/config.py" type="str"/>
-        <param name = "ckpt_det" value="weights/yolox-s_door_handle.pth" type="str"/>
+        <param name = "exp_file_det" value= "$(find handle_keypoints_node)/src/detector/config.py" type="str"/>
+        <param name = "ckpt_det" value="$(find handle_keypoints_node)/src/weights/yolox-s_door_handle.pth" type="str"/>
         <param name = "device_det" value="cuda:0" type="str"/>
         <param name = "conf" value="0.7" type="double"/>
-        <param name = "exp_file_reg" value="src/regressor/config.py" type="str"/>
-        <param name = "ckpt_reg" value="weights/hrnet_w32_256x192_door_handle.pth" type="str"/>
+        <param name = "exp_file_reg" value="$(find handle_keypoints_node)/src/regressor/config.py" type="str"/>
+        <param name = "ckpt_reg" value="$(find handle_keypoints_node)/src/weights/hrnet_w32_256x192_door_handle.pth" type="str"/>
         <param name = "device_reg" value="cuda:0" type="str"/>
     </node>
 </launch>
