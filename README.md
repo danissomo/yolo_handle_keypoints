@@ -15,7 +15,7 @@ cd ./catkin_ws
 mkdir src
 catkin_make
 mkdir src/handle_keypoints
-git clone https://github.com/danissomo/yolo_handle_keypoints.git src/handle_keypoints
+git clone --recurse-submodules https://github.com/danissomo/yolo_handle_keypoints.git src/handle_keypoints
 catkin_make
 source devel/setup.bash
 rosrun handle_keypoints_node start.sh
