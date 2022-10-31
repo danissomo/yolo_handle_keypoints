@@ -73,7 +73,9 @@ add_service_files(
 generate_messages(
   DEPENDENCIES
   vision_msgs
-  geometry_msgs#   sensor_msgs#   std_msgs
+  geometry_msgs
+  sensor_msgs
+  std_msgs
 )
 
 ################################################
@@ -109,7 +111,7 @@ catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES handle_keypoints_msgs
 #  CATKIN_DEPENDS geometry_msgs sensor_msgs std_msgs
-DEPENDS system_lib
+# DEPENDS system_lib
 )
 
 ###########
